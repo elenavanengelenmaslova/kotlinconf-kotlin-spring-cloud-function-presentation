@@ -29,28 +29,20 @@ class: px-8
 
 <v-clicks>
 
-<!-- Bullet points -->
-<ul class="text-left text-lg leading-relaxed text-slate-700 space-y-4 max-w-3xl">
-  <li><strong>Senior Software Engineer</strong> specializing in Kotlin and cloud-native solutions.</li>
-  <li>4× AWS and 2× Azure certified</li>
-  <li>Currently working as <strong>Lead Engineer</strong> at <strong>AZL (Life & Pensions – NN Group)</strong>.</li>
-  <li><strong>Author</strong> of <em>Kotlin Crash Course</em> and a <strong>blogger</strong> on Kotlin & Cloud topics.</li>
-</ul>
+<div class="flex flex-col md:flex-row gap-6 items-start pt-6 max-w-6xl">
 
-<!-- Final click: image + quote -->
-<div class="flex flex-col md:flex-row gap-6 items-center pt-8 max-w-4xl">
+  <!-- Left: Bullet points including author/blogger -->
+  <ul class="text-left text-lg leading-relaxed text-slate-700 space-y-4 flex-1">
+    <li><strong>Senior Software Engineer</strong> specializing in Kotlin and cloud-native solutions.</li>
+    <li>4× AWS and 2× Azure certified</li>
+    <li>Currently working as <strong>Lead Engineer</strong> at <strong>AZL (Life & Pensions – NN Group)</strong>.</li>
+    <li><strong>Author</strong> of <em>Kotlin Crash Course</em> and a <strong>blogger</strong> on Kotlin & Cloud topics.</li>
+  </ul>
 
-  <!-- Image: reduced size -->
+  <!-- Right: Book photo only -->
   <div class="flex-shrink-0">
-    <img src="/familyCarnaval.jpeg" alt="My family at Dutch Carnaval"
+    <img src="/MeAndBook.jpg" alt="Kotlin Crash Course"
       class="rounded-xl shadow-lg w-[200px] h-auto object-cover" />
-  </div>
-
-  <!-- Quote -->
-  <div class="italic text-slate-600 text-lg leading-relaxed text-center md:text-left px-2">
-    "I explain why Kotlin and Cloud is so much fun.<br />
-    They explain why Carnaval is so much fun.<br />
-    We’ve reached perfect mutual misunderstanding."
   </div>
 
 </div>
@@ -59,7 +51,7 @@ class: px-8
 
 <!--
 - 3- mins
-- who has been to dutch carnaval? Ok, so I still do not get it, but I tag along for my family's sake :). They also put up with my coding in the weekends so its mutual ;).
+- This is me and my book - and all I can say is - if anyone asks you to write a book - don't do it. It's a lot more work than you can imagine. Even if they say, ‘Just a small intro book’ - Definitely not! It's like giving birth to a child, it only takes longer than 9 month to do it. Basically, it's like 500 pages of blood, sweat and tears :). 
 Anyway, lets get started!
 -->
 
