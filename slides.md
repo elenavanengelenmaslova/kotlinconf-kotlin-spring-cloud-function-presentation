@@ -1,7 +1,8 @@
 ---
 theme: default
 colorSchema: light
-background: cover.jpeg
+image: KotlinConfStart.png
+layout: image
 class: text-center
 highlighter: shiki
 shiki:
@@ -12,14 +13,9 @@ drawings:
   persist: false
 transition: slide-up
 css: unocss
-title: 'Clean Architecture for Serverless: Business Logic You Can Take Anywhere'
+title: 'Kotlin Clean Architecture for Serverless: Business Logic You Can Take Anywhere'
 ---
 
-# Clean Architecture for Serverless: Business Logic You Can Take Anywhere
-
-<div class="pt-12">
-    Elena van Engelen - Maslova
-</div>
 
 <!--
 Wow! what a great crowd! Thank you for being here!
@@ -869,3 +865,7 @@ If you want to keep learning, I’ve created a 15% discount code just for Voxxed
 And if you’d like to stay in touch or ask follow-up questions after today, feel free to connect with me through my website or socials.
 -->
 
+---
+image: KotlinConfEnd.png
+layout: image
+---
