@@ -3,7 +3,9 @@ theme: default
 colorSchema: light
 background: cover.jpeg
 class: text-center
-highlighter: prism
+highlighter: shiki
+shiki:
+  theme: nord
 canvasWidth: 800
 lineNumbers: true
 drawings:
