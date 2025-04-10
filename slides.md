@@ -133,20 +133,22 @@ Serverless functions adjust automatically to load — they scale up during high 
 Triggered by events:
 Functions are invoked by events, like HTTP requests, messages, or file uploads. This makes serverless a natural fit for event-driven architectures, integrations, and automation flows.
 -->
-
 ---
-class: flex flex-col justify-center items-center h-[100vh] text-center space-y-4 px-8
+layout: center
 ---
 
-### <span class="text-4xl font-bold">Using FaaS makes life easier</span>
+<div class="space-y-4 px-8 text-center">
+  <div class="text-4xl font-bold">Using FaaS makes life easier</div>
+  <div class="text-2xl">but what about Portability?</div>
+  <div class="text-lg italic text-slate-600">
+    Let's see how Spring Cloud Function, Clean Architecture, and Gradle modules make your business logic Cloud-Agnostic!
+  </div>
+</div>
 
-### <span class="text-2xl">but what about Portability?</span>
 
-<span class="text-lg italic text-slate-600">
-Let's see how Spring Cloud Function, Clean Architecture, and Gradle modules make your business logic Cloud-Agnostic!
-</span>
-
-
+<!--
+Key concept is to keep business logic agnostic of cloud provider, so not cloud specific code or dependencies should be in the business logic of your app
+-->
 ---
 layout: image-right
 image: /SpringCloudFunction.png
