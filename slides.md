@@ -390,12 +390,12 @@ So wer are not using a Hello world, however the use case is still simple, we hve
 
 
 ---
-class: flex flex-col justify-center items-center h-[100vh] space-y-4
+class: center
 ---
 
 # Clean Architecture for Serverless
 
-<img src="/CleanArch.png" alt="Clean Architecture" style="width: 80%; height: auto;" />
+<img src="/CleanArch.png" alt="Clean Architecture" class="w-4/5 h-auto" />
 
 
 <!--
@@ -756,17 +756,17 @@ This ensures only the changes you already reviewed or tested in the plan step ar
 -->
 
 ---
-class: flex flex-col justify-center items-center h-[100vh] text-center space-y-4 px-8
+layout: center
 ---
 
-### <span class="text-4xl font-bold">Terraform</span>
-
-### <span class="text-2xl">lets you speak the same language — just in a different dialect.</span>
-
-<span class="text-lg italic text-slate-600">
+<div class="space-y-4 px-8 text-center">
+  <div class="text-4xl font-bold">Terraform</div>
+  <div class="text-2xl">lets you speak the same language — just in a different dialect.</div>
+  <div class="text-lg italic text-slate-600">
 Switching clouds doesn’t mean learning everything from scratch —  
 you already speak the language. It’s just a matter of picking up a few new words to match the local dialect.
-</span>
+  </div>
+</div>
 
 <!--
 Open build and Check with audience deploymemt status
