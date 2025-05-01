@@ -188,14 +188,15 @@ implementation("org.springframework.cloud:spring-cloud-function-adapter-azure:4.
 
 ### Azure function
 
-```kotlin {all|1,3-9,11}
-@FunctionName("RequestForwarder")
-fun forwardClientRequest(
+```kotlin {all|1,3-10,12}
+@FunctionName("UploadDocument")
+fun uploadDocument(
     @HttpTrigger(
-        methods = [HttpMethod.POST, HttpMethod.GET, HttpMethod.PATCH, HttpMethod.PUT, HttpMethod.DELETE],
+        name = "request",
+        methods = [HttpMethod.POST],
         authLevel = AuthorizationLevel.FUNCTION,
-        name = "request", route = "mocknest/{*route}"
-    ) request: HttpRequestMessage<String>,
+        route = "docs-flow"
+    ) originalRequest: HttpRequestMessage<ByteArray>,
     context: ExecutionContext,
 ): HttpResponseMessage {
     return buildResponse(request)
@@ -253,11 +254,11 @@ implementation("org.springframework.cloud:spring-cloud-function-adapter-aws:4.2.
 
 ```kotlin {all|2,8}
 @Bean
-fun router(): Function<APIGatewayProxyRequestEvent, APIGatewayProxyResponseEvent> {
+fun uploadDocument(): Function<APIGatewayProxyRequestEvent, APIGatewayProxyResponseEvent> {
     return Function { event ->
         APIGatewayProxyResponseEvent()
             .withStatusCode(200)
-            .withBody("Hello VoxxedDays Amsterdam 2025!")
+            .withBody("Hello NN Java Circle!")
     }
 }
 ```
@@ -286,7 +287,7 @@ fun router(): Function<APIGatewayProxyRequestEvent, APIGatewayProxyResponseEvent
             LambdaFunctionEnvironment.builder()
                 .variables(
                     mapOf(
-                        "SPRING_CLOUD_FUNCTION_DEFINITION" to "router",
+                        "SPRING_CLOUD_FUNCTION_DEFINITION" to "uploadDocument",
                         "MAIN_CLASS" to "com.example.clean.architecture.Application",
                     ).build()
                 ).build()
@@ -321,11 +322,11 @@ We’re going to upgrade it.
   </div>
 
   <div
-    class="text-5xl absolute bottom-16 left-40 text-[#2B90B6] z-10"
+    class="text-5xl absolute bottom-16 left-30 text-[#2B90B6] z-10"
     v-motion
     :initial="{ x: -80, opacity: 0}"
     :enter="{ x: -7, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Fast-forward to
+    Fast-forward from
   </div>
 
 <div
@@ -374,6 +375,22 @@ Then we’ll live-code how to use Clean Architecture with Spring Cloud Function 
 
 ---
 
+## Use Case
+
+<br>
+
+<img src="/UseCases.png" alt="Use Cases" class="max-w-[60%] max-h-[40vh] object-contain mx-auto" />
+
+<!-- 
+
+- 1 mins
+(Call Azure)
+
+So we are not using a Hello world, however, the use case is still simple, we have some business logic, which requires some persistence and notification functionality, and we are using a cloud-specific service for this persistence and notification. In AWS we will use S3 and SES, and in Azure we are using Blob Storage and ACS (Azure Communication Services). These are exactly what we need to store our docs and notify the reviewer.
+-->
+
+---
+
 ## Solution Design
 
 <br>
@@ -385,7 +402,7 @@ Then we’ll live-code how to use Clean Architecture with Spring Cloud Function 
 - 1 mins
 (Call Azure)
 
-So wer are not using a Hello world, however the use case is still simple, we hve some business logic which requires some persistence, and we are using a cloud specific service for this persistence. In AWS we will use S3, and in Azure we are using Blob Storage. These are exactly what we need to store our mock configuration.
+So we are not using a Hello world, however, the use case is still simple, we have some business logic, which requires some persistence and notification functionality, and we are using a cloud-specific service for this persistence and notification. In AWS we will use S3 and SES, and in Azure we are using Blob Storage and ACS (Azure Communication Services). These are exactly what we need to store our docs and notify the reviewer.
 -->
 
 
@@ -852,9 +869,7 @@ Feel free to ask anything — architecture, Kotlin, or serverless!
 
 
 <!-- 
-At the end of my Kotlin Crash Course book, chapter 13 walks you through building and deploying an event-driven serverless app with Kotlin on AWS.
-
-If you want to keep learning, I’ve created a 15% discount code just for Voxxed Days — valid until May 31.
+At the end of my Kotlin Crash Course book, chapter 13 walks you through building and deploying an event-driven serverless app with Kotlin and http4k on AWS.
 
 And if you’d like to stay in touch or ask follow-up questions after today, feel free to connect with me through my website or socials.
 -->
