@@ -853,15 +853,13 @@ Feel free to ask anything — architecture, Kotlin, or serverless!
     </a>
   </div>
 
-  <!-- Right: Book -->
+  <!-- Right: GitHub -->
   <div class="flex flex-col items-center space-y-2 text-sm text-slate-500">
-    <img src="/book-qr.png" alt="QR code to Kotlin Crash Course" class="w-28 rounded shadow" />
-    <div><strong>Kotlin Crash Course</strong> 📘</div>
-    <a href="https://qrco.de/bfquzM" target="_blank" class="text-blue-600 underline">
-      qrco.de/bfquzM
+    <img src="/GitHub.png" alt="QR code to GitHub" class="w-28 rounded shadow" />
+    <div><strong>Examples</strong> 🧑‍💻</div>
+    <a href="https://qrco.de/bdUojb" target="_blank" class="text-blue-600 underline">
+      qrco.de/bdUojb
     </a>
-    <div>Use code <span class="font-semibold text-slate-700">VOXXEDAMS15</span> for 15% off</div>
-    <div class="italic text-xs text-slate-400">Valid until: May 31</div>
   </div>
 
 </div>
