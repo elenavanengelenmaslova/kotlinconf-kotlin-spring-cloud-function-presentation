@@ -21,39 +21,6 @@ title: 'Kotlin Clean Architecture for Serverless: Business Logic You Can Take An
 Wow! what a great crowd! Thank you for being here!
 next slide
 -->
----
-class: px-8
----
-
-# Hi, I'm Elena van Engelen 👋
-
-<v-clicks>
-
-<div class="flex flex-col md:flex-row gap-6 items-start pt-6 max-w-6xl">
-
-  <!-- Left: Bullet points including author/blogger -->
-  <ul class="text-left text-lg leading-relaxed text-slate-700 space-y-4 flex-1">
-    <li><strong>Senior Software Engineer</strong> specializing in Kotlin and cloud-native solutions.</li>
-    <li>4× AWS and 2× Azure certified</li>
-    <li>Currently working as <strong>Lead Engineer</strong> at <strong>AZL (Life & Pensions – NN Group)</strong>.</li>
-    <li><strong>Author</strong> of <em>Kotlin Crash Course</em> and a <strong>blogger</strong> on Kotlin & Cloud topics.</li>
-  </ul>
-
-  <!-- Right: Book photo only -->
-  <div class="flex-shrink-0">
-    <img src="/MeAndBook.jpg" alt="Kotlin Crash Course"
-      class="rounded-xl shadow-lg w-[200px] h-auto object-cover" />
-  </div>
-
-</div>
-
-</v-clicks>
-
-<!--
-- 3- mins
-- This is me and my book - and all I can say is - if anyone asks you to write a book - don't do it. It's a lot more work than you can imagine. Even if they say, ‘Just a small intro book’ - Definitely not! It's like giving birth to a child, it only takes longer than 9 month to do it. Basically, it's like 500 pages of blood, sweat and tears :). 
-Anyway, lets get started!
--->
 
 ---
 transition: fade-out
@@ -68,7 +35,7 @@ transition: fade-out
 
 - 🌐 **Deployment & Terraform CDK**
 
-- 🗝️ **Key Takeaways + Q&A**
+- 🗝️ **Key Takeaway: A framework for cloud-agnostic business logic**
 
 
 <br>
@@ -94,6 +61,39 @@ h1 {
 - 1 min
 - In a mix of live coding with presentation I will show how you can use Spring Cloud Function with clean architecture to keep business logic cloud-agnostic.
 - We will also look briefly at Infrastructure as code with terraform CDK and deployment
+-->
+
+---
+class: px-8
+---
+
+# Hi, I'm Elena van Engelen 👋
+
+<v-clicks>
+
+<div class="flex flex-col md:flex-row gap-6 items-start pt-6 max-w-6xl">
+
+  <!-- Left: Bullet points including author/blogger -->
+  <ul class="text-left text-lg leading-relaxed text-slate-700 space-y-4 flex-1">
+    <li><strong>Senior Software Engineer</strong> specializing in Kotlin and cloud-native solutions.</li>
+    <li>4× AWS and 2× Azure certified</li>
+    <li>Currently working as <strong>Lead Engineer</strong> at <strong>AZL (Life & Pensions – NN Group)</strong>.</li>
+    <li><strong>Author</strong> of <em>Kotlin Crash Course</em> book and a <strong>blogger</strong> on Kotlin & Cloud topics.</li>
+  </ul>
+
+  <!-- Right: Book photo only -->
+  <div class="flex-shrink-0">
+    <img src="/MeAndBook.jpg" alt="Kotlin Crash Course"
+      class="rounded-xl shadow-lg w-[200px] h-auto object-cover" />
+  </div>
+
+</div>
+
+</v-clicks>
+
+<!--
+- 3- mins
+- This is me looking very happy the book is finally finished -  if anyone asks you to write a book - don't do it. It's like giving birth to another child - I already have 2 real children - it only takes longer than 9 months to do it. Really don't do it! Anyway, let's get started...
 -->
 
 ---
@@ -378,7 +378,7 @@ Then we’ll live-code how to use Clean Architecture with Spring Cloud Function 
 
 <br>
 
-<img src="/SolutionDesign.png" alt="Solution Design" class="max-w-[60%] max-h-[60vh] object-contain mx-auto" />
+<img src="/SolutionDesign.png" alt="Solution Design" class="max-w-[60%] max-h-[40vh] object-contain mx-auto" />
 
 <!-- 
 
