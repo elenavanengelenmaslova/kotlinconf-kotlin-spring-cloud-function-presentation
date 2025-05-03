@@ -29,11 +29,11 @@ transition: fade-out
 # Clean Architecture for Serverless
 ## Overview
 
-- 🌱 **Spring Cloud Function**
-
 - 🧼 **Clean Architecture**
 
-- 🌐 **Deployment & Terraform CDK**
+- 🌱 **Spring Cloud Function**
+
+- 📦 **Gradle modules**
 
 - 🗝️ **Key Takeaway: A framework for cloud-agnostic business logic**
 
@@ -59,8 +59,9 @@ h1 {
 <!--
 
 - 1 min
-- In a mix of live coding with presentation I will show how you can use Spring Cloud Function with clean architecture to keep business logic cloud-agnostic.
-- We will also look briefly at Infrastructure as code with terraform CDK and deployment
+Clean Architecture to isolate business logic from cloud specific code
+🌱 Spring Cloud Function to bridge cloud-specific concerns and core logic while preserving separation of concerns
+📦 Gradle modules to enforce architectural boundaries
 -->
 
 ---
@@ -279,7 +280,7 @@ fun uploadDocument(): Function<APIGatewayProxyRequestEvent, APIGatewayProxyRespo
     LambdaFunctionConfig.builder()
         .functionName(functionName)
         .handler("org.springframework.cloud.function.adapter.aws.FunctionInvoker")
-        .runtime("java17")
+        .runtime("java21")
         // other settings
         .role(lambdaRole.arn)
         .dependsOn(listOf(productsTable, lambdaRole))
@@ -371,22 +372,6 @@ But before we move on, let’s take a moment to understand what that deployment 
 
 Then we’ll live-code how to use Clean Architecture with Spring Cloud Function to inject real business logic into both AWS and Azure — while keeping cloud-specific code separate from the core logic.
 
--->
-
----
-
-## Use Case
-
-<br>
-
-<img src="/UseCases.png" alt="Use Cases" class="max-w-[60%] max-h-[40vh] object-contain mx-auto" />
-
-<!-- 
-
-- 1 mins
-(Call Azure)
-
-So we are not using a Hello world, however, the use case is still simple, we have some business logic, which requires some persistence and notification functionality, and we are using a cloud-specific service for this persistence and notification. In AWS we will use S3 and SES, and in Azure we are using Blob Storage and ACS (Azure Communication Services). These are exactly what we need to store our docs and notify the reviewer.
 -->
 
 ---
@@ -802,33 +787,38 @@ layout: center
 
 # Key Takeaways
 
-To conclude...
+🧭 How to Stay Cloud-Agnostic
 
 <v-clicks>
 
-🧹 **Cloud Anostic Business Logic with Clean Architecture and Spring Cloud Function**  
+1️⃣ **Let use cases drive abstractions — not cloud features**
 
-📦 **Structure with Gradle Modules**  
+2️⃣ **Separate cloud-specific code from business logic**
 
-🌍 **Deploy and Run Anywhere with Terraform CDK**  
+3️⃣ **Keep business logic out of the infrastructure layer**
 
-🛠️ **Kotlin Everywhere**
+4️⃣ **Enforce architectural boundaries**
 
 </v-clicks>
 
+
 <!-- 
 - 2 mins
-🧹 **Keep Business Logic Clean and Cloud-Agnostic**  
-Use Clean Architecture and Spring Cloud Function to isolate business logic from cloud-specific code.
+ **Let use cases drive abstractions — not cloud features**
+Don't design for a cloud, design for what your business logic needs. Your interface defines the contract; the cloud just fulfills it
 
-📦 **Use Gradle Modules for Clear Structure**  
-Separate your domain, application, and infrastructure layers to enforce clean boundaries.
+**Separate cloud-specific code from business logic**
+Use architecture such as clean architectures to Separate cloud-specific code from business logi. Use DI to inject cloud-specific dependencies — keep the logic clean 
 
-🌍 **Deploy Anywhere with Terraform CDK**  
-Once isolated, your logic can be reused across cloud platforms like AWS and Azure.
+ **Keep business logic out of the infrastructure layer**
+ The cloud code lives in the integration layer. You don't need to worry about other cloud providers — just reference interfaces in your logic
+⃣
+**Use Gradle modules to enforce architectural boundaries**
+This stops accidental imports and helps you isolate your layers 
 
-🛠️ **Kotlin Across Your Stack**  
-Use Kotlin not just for business logic, but also for infrastructure (Terraform CDK) and build scripts (Gradle).
+
+
+
 
 -->
 
