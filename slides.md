@@ -179,13 +179,16 @@ image: /SpringCloudFunction.png
 
 # Azure Function Code Examples
 
-<v-clicks>
+<v-click>
 
 ### build.gradle.kts in Azure infrastructure module:
 
 ```kotlin
 implementation("org.springframework.cloud:spring-cloud-function-adapter-azure:4.2.2")
 ```
+</v-click>
+
+<v-click>
 
 ### Azure function
 
@@ -204,7 +207,8 @@ fun uploadDocument(
 }
 ```
 
-</v-clicks>
+</v-click>
+
 
 <!-- 
 - 2mins
@@ -242,14 +246,15 @@ val functionApp = LinuxFunctionApp(
 # AWS Lambda Code Examples
 
 <v-clicks>
+<v-click>
 
 ### build.gradle.kts in AWS infrastructure module:
 
 ```kotlin
 implementation("org.springframework.cloud:spring-cloud-function-adapter-aws:4.2.2")
 ```
-
-
+</v-click>
+<v-click>
 
 ### AWS Lambda
 
@@ -264,6 +269,7 @@ fun uploadDocument(): Function<APIGatewayProxyRequestEvent, APIGatewayProxyRespo
 }
 ```
 
+</v-click>
 </v-clicks>
 
 <!-- 
@@ -782,6 +788,28 @@ layout: center
 
 <!--
 - 5 mins
+How to Get the Audience to Do a Wave After Your Talk
+Gauge the Mood: If your talk went well and the room feels energized, you’re in a good spot.
+
+Build It Up: Say something like:
+
+“I’m going to try something a bit silly, but we’ve earned it!”
+
+Give a Cue:
+
+“Let’s end with a wave – yes, like at a stadium. I’ll start on this side [point], and we’ll roll it across the room!”
+
+Do a Countdown:
+
+“Ready? 3… 2… 1… go!”
+
+Do It With Enthusiasm: Raise your arms high and smile to encourage participation. Be the wave leader.
+
+Celebrate the Result:
+
+“That was awesome. You’ve been an amazing audience!”
+
+
 -->
 ---
 
