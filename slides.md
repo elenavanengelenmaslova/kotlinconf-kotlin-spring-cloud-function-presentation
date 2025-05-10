@@ -26,8 +26,9 @@ next slide
 transition: fade-out
 ---
 
-# Clean Architecture for Serverless
-## Overview
+# Overview
+
+<v-clicks>
 
 - 🧼 **Clean Architecture**
 
@@ -37,6 +38,7 @@ transition: fade-out
 
 - 🗝️ **Key Takeaway: A framework for cloud-agnostic business logic**
 
+</v-clicks>
 
 <br>
 <br>
@@ -71,6 +73,7 @@ class: px-8
 # Hi, I'm Elena van Engelen 👋
 
 <v-clicks>
+
 
 <div class="flex flex-col md:flex-row gap-6 items-start pt-6 max-w-6xl">
 
@@ -761,23 +764,6 @@ This file will then be used for the actual apply step, so you're guaranteed to a
 
 Applies the previously generated plan (tfplan) without prompting for approval. What could possibly go wrong? ;)
 This ensures only the changes you already reviewed or tested in the plan step are applied — no surprises.
--->
-
----
-layout: center
----
-
-<div class="space-y-4 px-8 text-center">
-  <div class="text-4xl font-bold">Terraform</div>
-  <div class="text-2xl">lets you speak the same language — just in a different dialect.</div>
-  <div class="text-lg italic text-slate-600">
-Switching clouds doesn’t mean learning everything from scratch —  
-you already speak the language. It’s just a matter of picking up a few new words to match the local dialect.
-  </div>
-</div>
-
-<!--
-Open build and Check with audience deploymemt status
 -->
 
 ---
