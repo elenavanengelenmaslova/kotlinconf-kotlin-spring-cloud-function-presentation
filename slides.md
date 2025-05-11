@@ -30,9 +30,9 @@ transition: fade-out
 
 <v-clicks>
 
-- 🧼 **Clean Architecture**
-
 - 🌱 **Spring Cloud Function**
+
+- 🧼 **Clean Architecture**
 
 - 📦 **Gradle modules**
 
