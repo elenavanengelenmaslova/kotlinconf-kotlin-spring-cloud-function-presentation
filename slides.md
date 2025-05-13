@@ -424,14 +424,14 @@ Imagine we are build a pension administration microservice,
 # Clean Architecture - with gradle modules
 
 ```css {all|1-3|4-5,8-9|4,6,8,10}
-├── software/            // Holds all the application code
+├── software/              // Holds all the application code
 │   ├── domain/
 │   ├── application/
-│   └── infra/            // Infrastructure specific code
+│   └── infrastructure/    // Infrastructure specific code
 │       ├── aws/         
 │       └── azure/       
 │
-└── cdk/                  // Terraform CDK Kotlin code
+└── cdk/                    // Terraform CDK Kotlin code
     ├── aws/
     └── azure/
 ```
