@@ -805,20 +805,19 @@ layout: center
 
 <!-- 
 - 2 mins
- **Let use cases drive abstractions — not cloud features**
-Don't design for a cloud, design for what your business logic needs. Your interface defines the contract; the cloud just fulfills it
 
-**Separate cloud-specific code from business logic**
-Use architecture such as clean architectures to Separate cloud-specific code from business logi. Use DI to inject cloud-specific dependencies — keep the logic clean 
-
- **Keep business logic out of the infrastructure layer**
- The cloud code lives in the integration layer. You don't need to worry about other cloud providers — just reference interfaces in your logic
-⃣
-**Use Gradle modules to enforce architectural boundaries**
-This stops accidental imports and helps you isolate your layers 
+1️⃣ **Clean Architecture**: Business logic depends on interfaces, not cloud code. Use architecture such as clean architectures to Separate cloud-specific code from business logic. Use DI to inject cloud-specific dependencies — keep the logic clean 
 
 
+2️⃣ **Spring Cloud Function**: Abstractions follow use cases, not platform details. Don't design for a cloud, design for what your business logic needs. Your interface defines the contract; the cloud just fulfills it
 
+3️⃣ **Gradle Modules**: Enforces separation between layers. This stops accidental imports and helps you isolate your layers.
+
+💡 **Kotlin** can target JVM 8+ and **Terraform CDK** shares one language across clouds. You can use the latest version of Kotlin independently of which JVM the current cloud provider supports. Though we need to use cloud-specific constructs, we can still use the same language. 
+
+Alright — that wraps up my talk. If you learned something new, raise your hand.”
+(pause, smile)
+“Amazing! Now… could you smile? I want to take a selfie to show my 12-year-old that someone actually pays attention when I speak.”
 
 
 -->
