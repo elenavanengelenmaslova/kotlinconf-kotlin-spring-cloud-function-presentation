@@ -20,13 +20,28 @@ title: 'Kotlin Clean Architecture for Serverless: Business Logic You Can Take An
 <!--
 Wow! what a great crowd! Thank you for being here!
 next slide
+
 -->
+
+
+---
+layout: center
+---
+
+<div class="space-y-4 px-8 text-center">
+  <div class="text-4xl font-bold">Is serverless secretly locking us in?</div>
+  <div class="text-lg italic text-slate-600">
+    That is what many developers and even some thought leaders believe.
+  </div>
+ <div class="text-2xl">But what if the real problem is not serverless itself but how we architect our code?</div>
+</div>
+
 
 ---
 transition: fade-out
 ---
 
-# Overview
+# Building Blocks
 
 <v-clicks>
 
@@ -768,24 +783,25 @@ layout: center
 - 5 mins
 
 -->
+
 ---
+
 
 # Key Takeaways
 
-🧭 How to Stay Cloud-Agnostic
+🧭 How we Stayed Cloud-Agnostic
 
 <v-clicks>
 
-1️⃣ **Let use cases drive abstractions — not cloud features**
+1️⃣ **Clean Architecture**: Business logic depends on interfaces, not cloud code
 
-2️⃣ **Separate cloud-specific code from business logic**
+2️⃣ **Spring Cloud Function**: Abstractions follow use cases, not platform details
 
-3️⃣ **Keep business logic out of the infrastructure layer**
+3️⃣ **Gradle Modules**: Enforces separation between layers
 
-4️⃣ **Enforce architectural boundaries**
+💡 **Kotlin** can target JVM 8+ and **Terraform CDK** shares one language across clouds
 
 </v-clicks>
-
 
 <!-- 
 - 2 mins
