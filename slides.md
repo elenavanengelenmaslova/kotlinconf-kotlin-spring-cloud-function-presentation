@@ -152,6 +152,29 @@ Serverless functions adjust automatically to load — they scale up during high 
 Triggered by events:
 Functions are invoked by events, like HTTP requests, messages, or file uploads. This makes serverless a natural fit for event-driven architectures, integrations, and automation flows.
 -->
+
+
+---
+transition: slide-up
+layout: image-right
+image: /ServerlessEvents.png
+---
+
+# Common FaaS Use Cases
+
+<v-clicks>
+
+- REST APIs
+- IoT event processing
+- Data transformation
+- Scheduled tasks
+
+</v-clicks>
+
+<!--
+Functions as a Service (FaaS) is the most common model in serverless. You define a function triggered by events, such as HTTP requests, message queues, event streaming or file uploads, and the platform runs it only when needed. Popular use cases include REST APIs, IoT event processing, data transformation, and scheduled tasks.
+-->
+
 ---
 layout: center
 ---
@@ -166,7 +189,10 @@ layout: center
 
 
 <!--
-Key concept is to keep business logic agnostic of cloud provider, so not cloud specific code or dependencies should be in the business logic of your app
+FaaS makes life easier. You no longer manage infrastructure; instead, you just write functions, and the cloud takes care of provisioning, scaling, and billing based on usage. It is fast to implement, cost-effective, and ideal for small, focused units of work.
+
+But here is the catch: what about portability? You start with one cloud provider, maybe AWS Lambda or Azure Functions, and before long, your business logic is wrapped in platform-specific code. Companies are concerned about vendor lock-in, or rework, if they ever need to switch providers. This fear keeps many companies from taking full advantage of FaaS.
+
 -->
 ---
 layout: image-right
@@ -789,7 +815,7 @@ layout: center
 
 # Key Takeaways
 
-🧭 How we Stayed Cloud-Agnostic
+🧭 Recipe for Cloud-Agnostic Serverless FaaS
 
 <v-clicks>
 
@@ -805,20 +831,19 @@ layout: center
 
 <!-- 
 - 2 mins
- **Let use cases drive abstractions — not cloud features**
-Don't design for a cloud, design for what your business logic needs. Your interface defines the contract; the cloud just fulfills it
 
-**Separate cloud-specific code from business logic**
-Use architecture such as clean architectures to Separate cloud-specific code from business logi. Use DI to inject cloud-specific dependencies — keep the logic clean 
-
- **Keep business logic out of the infrastructure layer**
- The cloud code lives in the integration layer. You don't need to worry about other cloud providers — just reference interfaces in your logic
-⃣
-**Use Gradle modules to enforce architectural boundaries**
-This stops accidental imports and helps you isolate your layers 
+1️⃣ **Clean Architecture**: Business logic depends on interfaces, not cloud code. Use architecture such as clean architectures to Separate cloud-specific code from business logic. Use DI to inject cloud-specific dependencies — keep the logic clean 
 
 
+2️⃣ **Spring Cloud Function**: Abstractions follow use cases, not platform details. Don't design for a cloud, design for what your business logic needs. Your interface defines the contract; the cloud just fulfills it
 
+3️⃣ **Gradle Modules**: Enforces separation between layers. This stops accidental imports and helps you isolate your layers.
+
+💡 **Kotlin** can target JVM 8+ and **Terraform CDK** shares one language across clouds. You can use the latest version of Kotlin independently of which JVM the current cloud provider supports. Though we need to use cloud-specific constructs, we can still use the same language. 
+
+Alright — that wraps up my talk. If you learned something new, raise your hand.”
+(pause, smile)
+“Amazing! Now… could you smile? I want to take a selfie to show my 12-year-old that someone actually pays attention when I speak.”
 
 
 -->
@@ -844,12 +869,12 @@ Feel free to ask anything — architecture, Kotlin, or serverless!
     </a>
   </div>
 
-  <!-- Right: GitHub -->
+  <!-- Right: Medium -->
   <div class="flex flex-col items-center space-y-2 text-sm text-slate-500">
-    <img src="/GitHub.png" alt="QR code to GitHub" class="w-28 rounded shadow" />
-    <div><strong>Examples</strong> 🧑‍💻</div>
-    <a href="https://qrco.de/bdUojb" target="_blank" class="text-blue-600 underline">
-      qrco.de/bdUojb
+    <img src="/MediumCleanArchitectureArticle.png" alt="QR code to Medium" class="w-28 rounded shadow" />
+    <div><strong>Want to go further?</strong> Read the full guide on Medium 🧑‍💻</div>
+    <a href="https://qrco.de/bekJvR" target="_blank" class="text-blue-600 underline">
+      qrco.de/bekJvR
     </a>
   </div>
 
