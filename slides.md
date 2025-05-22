@@ -344,6 +344,34 @@ fun uploadDocument(): Function<APIGatewayProxyRequestEvent, APIGatewayProxyRespo
 -->
 
 ---
+
+# Terraform CDK - Simplified API Gateway example
+
+```kotlin {all|1,5,8,12,13}
+val docsFlowResource = ApiGatewayResource(
+    this, "DocsFlow-Resource",
+    ApiGatewayResourceConfig.builder()
+        // ...
+        .pathPart("docs-flow")
+        .build()
+)
+val docsFlowMethod = ApiGatewayMethod(
+    this, "DocsFlow-Method",
+    ApiGatewayMethodConfig.builder()
+        // ...
+        .httpMethod("POST")  // Only allow POST method
+        .apiKeyRequired(true)  // Require API key
+        .build()
+)
+```
+
+<!--
+- 1 min
+- call AWS and Azure
+- Insure to include spring cloud function adapter in infrastructure layer dependencies.
+-->
+
+---
 preload: false
 ---
 
