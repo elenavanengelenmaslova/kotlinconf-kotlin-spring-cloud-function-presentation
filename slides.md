@@ -598,6 +598,19 @@ preload: false
   <img src="/ArrowS3.png" class="w-32" />
 </div>
 
+<!-- Arrow to SES -->
+<div
+  class="absolute top-[18%] left-[10%] z-0"
+  v-motion
+  :initial="{ opacity: 0 }"
+  :enter="{ 
+    opacity: 1,
+    transition: { delay: 1500, duration: 600 }
+  }"
+>
+  <img src="/ArrowSES.png" class="w-32" />
+</div>
+
 <!-- Arrow to Blob Storage -->
 <div
   class="absolute top-[18%] right-[26%] z-0"
@@ -610,6 +623,20 @@ preload: false
 >
   <img src="/ArrowBlobStorage.png" class="w-32" />
 </div>
+
+<!-- Arrow to ACS -->
+<div
+  class="absolute top-[11%] right-[8%] z-0"
+  v-motion
+  :initial="{ opacity: 0 }"
+  :enter="{ 
+    opacity: 1,
+    transition: { delay: 1500, duration: 600 }
+  }"
+>
+  <img src="/ArrowACS.png" class="w-32" />
+</div>
+
 
 </div>
 
