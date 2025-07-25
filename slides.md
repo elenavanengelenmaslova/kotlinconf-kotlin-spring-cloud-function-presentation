@@ -95,8 +95,9 @@ class: px-8
   <!-- Left: Bullet points including author/blogger -->
   <ul class="text-left text-lg leading-relaxed text-slate-700 space-y-4 flex-1">
     <li><strong>Senior Software Engineer</strong> specializing in Kotlin and cloud-native solutions.</li>
-    <li>4× AWS and 2× Azure certified</li>
     <li>Currently working as <strong>Lead Engineer</strong> at <strong>AZL (Life & Pensions – NN Group)</strong>.</li>
+    <li>4× AWS and 3× Azure certified</li>
+   <li>AWS Community Builder in Serverless Category</li>
     <li><strong>Author</strong> of <em>Kotlin Crash Course</em> book and a <strong>blogger</strong> on Kotlin & Cloud topics.</li>
   </ul>
 
